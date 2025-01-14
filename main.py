@@ -2,7 +2,7 @@ import subprocess
 
 print(f"CNN for breastmnist---------------------------")
 # Path to the script you want to run
-script_path = r"E:\ML_CW\A\custom CNN test breast.py"
+script_path = r"E:/ML_CW/ziyichen20-AMLS_24_25_SN21083037/A/custom CNN test breast.py"
 try:
     # Use subprocess to execute the script
     subprocess.run(["python", script_path], check=True)
@@ -13,7 +13,7 @@ except FileNotFoundError:
     
 print(f"transfer learning for breastmnist---------------------------")
 # Path to the script you want to run
-script_path = r"E:\ML_CW\A\transfer learning test breast.py"
+script_path = r"E:/ML_CW/ziyichen20-AMLS_24_25_SN21083037/A/transfer learning test breast.py"
 try:
     # Use subprocess to execute the script
     subprocess.run(["python", script_path], check=True)
@@ -24,7 +24,7 @@ except FileNotFoundError:
 
 print(f"Resnet18 for bloodmnist---------------------------")
 # Path to the script you want to run
-script_path = r"E:\ML_CW\B\Resnet18 test blood.py"
+script_path = r"E:/ML_CW/ziyichen20-AMLS_24_25_SN21083037/B/Resnet18 test blood.py"
 try:
     # Use subprocess to execute the script
     subprocess.run(["python", script_path], check=True)
@@ -35,7 +35,7 @@ except FileNotFoundError:
     
     
 print(f"Custom CNN for bloodmnist---------------------------")
-script_path = r"E:\ML_CW\B\customCNN test blood.py"
+script_path = r"E:/ML_CW/ziyichen20-AMLS_24_25_SN21083037/B/customCNN test blood.py"
 
 try:
     # Use subprocess to execute the script

@@ -11,7 +11,7 @@ import os
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Path to the saved model
-model_save_path = "E:\\ML_CW\\A\\breast_mnist_cnn.pth"
+model_save_path = "E:/ML_CW/ziyichen20-AMLS_24_25_SN21083037/A/breast_mnist_cnn.pth"
 
 # Data Preprocessing
 test_transform = transforms.Compose([

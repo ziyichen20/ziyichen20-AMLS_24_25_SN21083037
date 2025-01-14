@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Path to the saved model
-model_save_path = "E:\\ML_CW\\A\\breast_mnist_resnet.pth"
+model_save_path = "E:/ML_CW/ziyichen20-AMLS_24_25_SN21083037/A/breast_mnist_resnet.pth"
 
 # Data Preprocessing (same as training)
 test_transform = transforms.Compose([

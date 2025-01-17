@@ -3,8 +3,9 @@ import torchvision.transforms as transforms
 from medmnist import BreastMNIST
 from torch.utils.data import DataLoader
 import torch.nn as nn
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import matplotlib.pyplot as plt
+import seaborn as sns
 import os
 
 # Define device
@@ -105,3 +106,12 @@ print(f"Test Accuracy: {accuracy:.4f}")
 print(f"Test Precision: {precision:.4f}")
 print(f"Test Recall: {recall:.4f}")
 print(f"Test F1-Score: {f1:.4f}")
+
+# Confusion Matrix
+conf_matrix = confusion_matrix(all_targets, all_preds)
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=["Class 0", "Class 1"], yticklabels=["Class 0", "Class 1"])
+plt.xlabel('Predicted Labels')
+plt.ylabel('True Labels')
+plt.title('Confusion Matrix')
+plt.show()

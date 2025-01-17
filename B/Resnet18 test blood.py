@@ -3,12 +3,10 @@ import torchvision.transforms as transforms
 from torchvision import models
 from medmnist import BloodMNIST
 from torch.utils.data import DataLoader
-
-
-
 import torch.nn as nn
-from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import matplotlib.pyplot as plt
+import seaborn as sns
 import os
 
 # Define device
@@ -81,6 +79,15 @@ print(f"F1-Score: {f1:.4f}")
 
 # Classification Report
 print(classification_report(all_labels, all_preds, target_names=[f"Class {i}" for i in range(8)]))
+
+# Confusion Matrix
+conf_matrix = confusion_matrix(all_labels, all_preds)
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=[f"Class {i}" for i in range(8)], yticklabels=[f"Class {i}" for i in range(8)])
+plt.xlabel('Predicted Labels')
+plt.ylabel('True Labels')
+plt.title('Confusion Matrix')
+plt.show()
 
 # Sample Visualization
 classes = [f"Class {i}" for i in range(8)]
